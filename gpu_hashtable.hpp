@@ -24,10 +24,6 @@ using namespace std;
 		}	\
 	} while (0)
 
-//int hashFunc(int value, int limit) {
-//        return ((long) abs(value) * 421439781llu) % 271862205833llu % limit;
-//}
-
 
 typedef struct hash_node {
 	unsigned int key;

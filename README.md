@@ -32,7 +32,7 @@ Testarea manuala / automata se face cu:
 
 ## Implementare
 Am realizat 2 structuri (`HashNode` si `HashTable`) in care sa stochez 
-datele primite. Fucntia de hash este de forma `((value * a) / b) % limit`  unde a si b sunt
+datele primite. Functia de hash este de forma `((value * a) / b) % limit`  unde a si b sunt
 niste numere prime alese random.
 
 - `insertBatch()` - apeleaza functia `kernel_insertBatch()` care calculeaza 

@@ -11,7 +11,7 @@ Structura de date tip HashTable are urmatoarele caracteristici:
 - va face update la valoarea unei chei
 - va putea intoarce corect, intr-un timp rapid, valoarea corespunzatoare unei chei
 
-Alocarea ai dealocarea memoriei CUDA se va face folosind doar functiile wrapper: `_cudaMalloc`, `_cudaMallocManaged`, `_cudaFree`.
+Alocarea si dealocarea memoriei CUDA se va face folosind doar functiile wrapper: `_cudaMalloc`, `_cudaMallocManaged`, `_cudaFree`.
 
 ## Organizare
 Tema are urmatoarea organizare:

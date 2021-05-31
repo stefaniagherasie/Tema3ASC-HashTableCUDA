@@ -37,7 +37,7 @@ niste numere prime alese random.
 
 - `insertBatch()` - apeleaza functia `kernel_insertBatch()` care calculeaza 
 hashcode pentru fiecare cheie. Daca locul din HashTable indicat de hashcode este
-ocupat, se cauta la dreapta urmatoarea positie libera. Se foloseste functia 
+ocupat, se cauta la dreapta urmatoarea pozitie libera. Se foloseste functia 
 `atomicExchange` pentru a evita probleme de concurenta. Se verifica daca structura
 de HashTable are nevoie de reshape. 
 - `reshape()` - se copiaza toate valorile din tabela initiala intr-o tabela de

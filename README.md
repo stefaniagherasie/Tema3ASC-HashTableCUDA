@@ -24,5 +24,10 @@ Tema are urmatoarea organizare:
 ## Rulare si Testare
 Rularea si testarea se realizeaza pe **cluster** (username@fep.grid.pub.ro), pe coada `hp-sl.q` (sau  `ibm-dp.q`).
 
+Testarea manuala / automata se face cu:
+```shell
+    ./gpu_hashtable <entries> <chunks> <speed>
+    python3 bench.py
+```
 
 

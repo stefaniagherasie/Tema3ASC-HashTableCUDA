@@ -1,5 +1,5 @@
 # Tema3ASC-HashTableCUDA
-[Tema3 - Arhitectura Sistemelor de Calcul] 
+[Tema3 - Arhitectura Sistemelor de Calcul] <br>
 Tema presupune implementarea unei structuri de HashTable folosind CUDA, avand ca target GPU Tesla K40 (hp-sl.q).
 
 > Enuntul se gaseste [aici](https://ocw.cs.pub.ro/courses/asc/teme/tema3).
@@ -29,5 +29,27 @@ Testarea manuala / automata se face cu:
     ./gpu_hashtable <entries> <chunks> <speed>
     python3 bench.py
 ```
+
+## Implementare
+Am realizat 2 structuri (`HashNode` si `HashTable`) in care sa stochez 
+datele primite. Fucntia de hash este de forma `((value * a) / b) % limit`  unde a si b sunt
+niste numere prime alese random.
+
+- `insertBatch()` - apeleaza functia `kernel_insertBatch()` care calculeaza 
+hashcode pentru fiecare cheie. Daca locul din HashTable indicat de hashcode este
+ocupat, se cauta la dreapta urmatoarea positie libera. Se foloseste functia 
+`atomicExchange` pentru a evita probleme de concurenta. Se verifica daca structura
+de HashTable are nevoie de reshape. 
+- `reshape()` - se copiaza toate valorile din tabela initiala intr-o tabela de
+dimensiunea data. La inserarea in noua tabela se calculeaza din nou hashcode-ul.
+- `getBatch()` - se cauta in tabela valorile corespunzatoare cheilor folosind
+hashcode-ul. Valorile intoarse de functia `kernel_getBatch()` se copiaza intr-un 
+vector de pe host.
+
+## Bibliografie
+1. https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#atomicexch
+2. https://ocw.cs.pub.ro/courses/asc/laboratoare/07
+3. https://ocw.cs.pub.ro/courses/asc/laboratoare/08
+4. https://ocw.cs.pub.ro/courses/asc/laboratoare/09
 
 

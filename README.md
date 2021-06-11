@@ -1,5 +1,5 @@
 # Tema3ASC-HashTableCUDA
-[Tema3 - Arhitectura Sistemelor de Calcul] <br>
+[Tema3 - Arhitectura Sistemelor de Calcul] <br> 
 Tema presupune implementarea unei structuri de HashTable folosind CUDA, avand ca target GPU Tesla K40 (hp-sl.q).<br>
 Enuntul se gaseste [aici](https://ocw.cs.pub.ro/courses/asc/teme/tema3).
 
